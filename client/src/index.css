@@ -1,0 +1,104 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  min-height: 100vh;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.3s ease;
+}
+
+/* Support both class and attribute forms for compatibility */
+:root.dark,
+:root[class='dark'] {
+  color-scheme: dark;
+  color: #e2e8f0;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+:root.light,
+:root[class='light'] {
+  color-scheme: light;
+  color: #1e293b;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+:root.dark a,
+:root[class='dark'] a {
+  color: #60a5fa;
+}
+
+:root.dark a:hover,
+:root[class='dark'] a:hover {
+  color: #3b82f6;
+}
+
+:root.light a,
+:root[class='light'] a {
+  color: #2563eb;
+}
+
+:root.light a:hover,
+:root[class='light'] a:hover {
+  color: #1d4ed8;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+:root.dark button,
+:root[class='dark'] button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+:root.dark button:hover,
+:root[class='dark'] button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+:root.light button,
+:root[class='light'] button {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1e293b;
+}
+
+:root.light button:hover,
+:root[class='light'] button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

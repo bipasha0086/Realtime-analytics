@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Dashboard — Static</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Poppins font for polished UI -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-bg">
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="profile">
+          <div class="avatar" aria-hidden="true">U</div>
+          <div class="profile-info">
+            <div class="username">User</div>
+            <div id="local-date" class="local-date">Loading...</div>
+            <div id="local-time" class="local-time">--:--:--</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-btn active" data-target="dashboard">Dashboard</button>
+          <button class="nav-btn" data-target="analytics">Analytics</button>
+          <button class="nav-btn" data-target="alerts">Alerts</button>
+          <button class="nav-btn" data-target="settings">Settings</button>
+        </nav>
+
+        <div class="sidebar-footer">v1.0 • Offline</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1 class="title">Real-time Analytics</h1>
+          <div class="greeting">Hi User 👋</div>
+        </div>
+        <div class="weather" id="weather">
+          <div class="temp" id="weather-temp">--°C</div>
+          <div class="cond" id="weather-cond">--</div>
+          <div class="meta">Humidity: <span id="weather-hum">--%</span> • Wind: <span id="weather-wind">-- km/h</span></div>
+        </div>
+        <div class="topbar-right">
+          <label class="range-label">Range
+            <select id="timeRange">
+              <option value="1h">1h</option>
+              <option value="6h">6h</option>
+              <option value="24h">24h</option>
+            </select>
+          </label>
+          <button id="toggleStats" class="btn btn-ghost">Show Statistics</button>
+          <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle theme">🌙</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="content-section active-section">
+        <div class="cards-grid" id="cards">
+          <!-- Cards inserted by JS -->
+        </div>
+
+        <section class="alerts-section">
+          <div class="alerts-form">
+            <h2>Alert Manager</h2>
+            <div class="form-row">
+              <input id="alert-metric" placeholder="Metric name (e.g. CPU Usage)" />
+              <input id="alert-threshold" type="number" placeholder="Threshold" />
+              <select id="alert-condition">
+                <option value="above">Above</option>
+                <option value="below">Below</option>
+              </select>
+              <button id="createAlert" class="btn btn-primary">Create Alert</button>
+            </div>
+          </div>
+
+          <div class="alerts-list" id="alertsList">
+            <h3>Active Alerts</h3>
+            <div id="alertsContainer">No active alerts</div>
+          </div>
+        </section>
+      </section>
+
+      <section id="analytics" class="content-section">
+        <div class="analytics-panel">
+          <h2>Analytics Overview</h2>
+          <p class="muted">Quick charts and insights (demo)</p>
+          <div class="analytics-grid" id="analyticsGrid"></div>
+        </div>
+      </section>
+
+      <section id="alerts" class="content-section">
+        <div class="center-note">
+          <h2>Alerts Center</h2>
+          <p class="muted">Manage alerts created from the dashboard below.</p>
+        </div>
+      </section>
+
+      <section id="settings" class="content-section">
+        <div class="center-note">
+          <h2>Settings</h2>
+          <p class="muted">Theme and preferences — static demo.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer removed for demo -->
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

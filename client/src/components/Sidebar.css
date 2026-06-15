@@ -1,0 +1,70 @@
+.sidebar-gradient {
+  width: 260px;
+  min-width: 220px;
+  height: 100vh;
+  background: linear-gradient(180deg, #7a3ce7 0%, #1f1f64 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 2px 0 24px 0 #7a3ce733;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.avatar-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #fff3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 12px #7a3ce755;
+}
+.avatar-circle img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.sidebar-welcome {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 2px 8px #1f1f6455;
+}
+.sidebar-datetime {
+  color: #e0e7ff;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 0 2px 8px #1f1f6455;
+}
+.sidebar-date {
+  margin-bottom: 0.2rem;
+}
+.sidebar-time {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 900px) {
+  .sidebar-gradient {
+    display: none;
+  }
+}
