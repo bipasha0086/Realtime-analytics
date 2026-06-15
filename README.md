@@ -16,22 +16,7 @@
 - Node.js and npm installed
 - MongoDB installed and running locally on port 27017
 
-### 1. Backend Setup
-```bash
-cd server
-npm install
-node app.js
-```
 
-The server runs on [http://localhost:4000](http://localhost:4000)
-
-### 2. Frontend Setup
-```bash
-cd client
-npm install
-npm start
-```
-The React app runs on [http://localhost:3000](http://localhost:3000)
 
 ---
 
